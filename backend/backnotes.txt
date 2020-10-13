@@ -1,0 +1,39 @@
+Server.ts
+
+//Rota -> conjunto
+//Recurso => usuário
+
+//Métodos HTTP = GET, POST, PUT, DELETE.
+    // GET -> buscar (Lista,Item)
+    // POST -> criar uma informação
+
+    // PUT -> editando uma informação
+    // Delete -> deletar uma informação
+    // Navegador só usa método get
+
+
+//Parametros
+    //Query: http://localhost:3333/users?search=diego -> utilizado pra filtro.
+    //Route Params: http://localhost:3333/users/1  -> identificar um recurso (usuário com ID = 1)
+    //Body: http://localhost:3333/users/1 -> usado para informaç~eos mais complexas, com bastante informação (formulário)
+
+app.post('/users/:id', (request, response) => {
+    console.log(request.query);
+    console.log(request.params);
+    console.log(request.body)
+
+    return response.json({message: 'Hello world'})
+});
+
+Lidar com Banco de dados em uma aplicação. 
+    Driver nativo -> Escreve tudo em linguagem de banco de dados
+    Query Builder -> knex, escrever banco de dados em JS e depois ele converte pra linguagem de BD.
+    ORM -> uma classe do JS que simboliza uma tabela do BD, ainda utilizando sintaxe do JavaScript.
+    (Object Relational Mapping) 
+
+
+
+MVC
+MODEL 
+VIEW 
+CONTROLLER 
